@@ -448,10 +448,14 @@ test_function_definition(
 )
 
 # Test the value of yell
-test_object("yell", incorrect_msg = "Did you assign the result of shout() to yell?")
+test_object("yell", incorrect_msg = "Did you assign the result of `shout()` to `yell`?")
 
 # Test the output
-test_output_contains("congratulations!!!", pattern = False)
+test_output_contains(
+    "congratulations!!!", 
+    pattern = False, 
+    no_output_msg = "Did you print out `yell`?"
+)
 
 success_msg("Great work!")
 ```
