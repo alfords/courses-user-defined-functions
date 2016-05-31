@@ -617,7 +617,7 @@ print(yell)
 # Note [FRANCIS]: Tests appear code-level, that is, as they appear top-down in the code.
 
 # Test definition of shout()
-test_function_definition("shout", arg_names = True, arg_names_msg = "Check if `shout()` has a correct set of parameters")
+test_function_definition("shout", arg_names = True)
 
 # Test the value of shout1
 test_function_definition(
