@@ -178,13 +178,13 @@ def square(value):
 # Define the function shout
 def ___():
 
-    # Concatenate the string 'congratulations' to '!!!' and assign to shout_word
+    # Concatenate the strings
     
 
-    # Print the value of shout_word
+    # Print shout_word
     print(___)
 
-# Call the shout function
+# Call shout
 
 ```
 
@@ -193,13 +193,13 @@ def ___():
 # Define the function shout
 def shout():
 
-    # Concatenate the string 'congratulations' to '!!!' and assign to shout_word
+    # Concatenate the strings
     shout_word = 'congratulations' + '!!!'
 
-    # Print the value of shout_word
+    # Print shout_word
     print(shout_word)
 
-# Call the shout function
+# Call shout
 shout()
 ```
 
