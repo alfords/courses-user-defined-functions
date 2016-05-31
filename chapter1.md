@@ -623,14 +623,14 @@ test_function_definition("shout", arg_names = True)
 test_function_definition(
     "shout", 
     arg_names = False,
-    body = lambda: test_object_after_expression("shout1", context_vals = ["congratulations!!!", "you!!!"])
+    body = lambda: test_object_after_expression("shout1", context_vals = ["congratulations", "you"])
 )
 
 # Test the value of shout2
 test_function_definition(
     "shout", 
     arg_names = False,
-    body = lambda: test_object_after_expression("shout2", context_vals = ["congratulations!!!", "you!!!"])
+    body = lambda: test_object_after_expression("shout2", context_vals = ["congratulations", "you"])
 )
 
 # Test the value of new_shout
@@ -861,7 +861,7 @@ test_output_contains(
 )
 
 test_output_contains(
-    "congratulations!!!", 
+    "you!!!", 
     pattern = False, 
     no_output_msg = "Did you print out `yell2`?"
 )
