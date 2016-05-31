@@ -378,19 +378,19 @@ import numpy as np
 
 *** =sample_code
 ```{python}
-# Define the function shout, which accepts the parameter word
+# Define shout with the parameter, word
 def shout (word):
 
-    # Concatenate the string in word with '!!!' and assign to shout_word
+    # Concatenate the strings
     
 
-    # Replace the print statement with the appropriate return statement
+    # Replace print with return
     print(shout_word)
 
-# Call shout with the string 'congratulations' and assign the result to yell
+# Pass 'congratulations' to shout and assign to yell
 
 
-# Print the value of yell
+# Print yell
 
 ```
 
