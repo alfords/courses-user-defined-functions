@@ -663,19 +663,19 @@ nums = (3,4,6)
 
 *** =sample_code
 ```{python}
-# Unpack the tuple nums into the variables num1, num2, and num3
+# Unpack nums into num1, num2, and num3
 
 
-# Construct the tuple even_nums
+# Construct even_nums
 
 ```
 
 *** =solution
 ```{python}
-# Unpack the tuple nums into the variables num1, num2, and num3
+# Unpack nums into num1, num2, and num3
 num1, num2, num3 = nums
 
-# Construct the tuple even_nums
+# Construct even_nums
 even_nums = (2, num2, num3)
 ```
 
@@ -728,50 +728,50 @@ Let's now update our `shout()` function to return multiple values. Instead of re
 
 *** =sample_code
 ```{python}
-# Define the function shout_all, which accepts the parameters word1 and word2
+# Define shout_all with parameters word1 and word2
 def shout(___, ___):
 
-    # Concatenate the string '!!!' to word1 and assign to shout1
+    # Concatenate word1 with '!!!'
     
     
-    # Concatenate the string '!!!' to word2 and assign to shout2
+    # Concatenate word2 with '!!!'
     
     
-    # Construct a tuple, shout_words, that contains shout1 and shout2
+    # Construct shout_words to contain shout1 and shout2
     
 
     # Return shout_words
     return shout_words
 
-# Call shout_all with the strings 'congratulations' and 'you' and assign the result to yell1 and yell2
+# Pass 'congratulations' and 'you' to shout and assign to yell1 and yell2
 
 
-# Print the values of yell1 and yell2
+# Print yell1 and yell2
 print(yell1)
 print(yell2)
 ```
 
 *** =solution
 ```{python}
-# Define the function shout_all, which accepts the parameters word1 and word2
+# Define shout_all with parameters word1 and word2
 def shout_all(word1, word2):
 
-    # Concatenate the string '!!!' to word1 and assign to shout1
+    # Concatenate word1 with '!!!'
     shout1 = word1 + '!!!'
     
-    # Concatenate the string '!!!' to word2 and assign to shout2
+    # Concatenate word2 with '!!!'
     shout2 = word2 + '!!!'
     
-    # Construct a tuple, shout_words, that contains shout1 and shout2
+    # Construct shout_words to contain shout1 and shout2
     shout_words = (shout1, shout2)
 
     # Return shout_words
     return shout_words
 
-# Call shout with the strings 'congratulations' and 'you' and assign the result to yell1 and yell2
+# Pass 'congratulations' and 'you' to shout and assign to yell1 and yell2
 yell1, yell2 = shout_all('congratulations', 'you')
 
-# Print the values of yell1 and yell2
+# Print yell1 and yell2
 print(yell1)
 print(yell2)
 ```
