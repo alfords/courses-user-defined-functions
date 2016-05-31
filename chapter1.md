@@ -815,38 +815,56 @@ print(yell2)
 # Test definition of shout_all()
 test_function_definition("shout_all", arg_names = True)
 
-# Test the value of word1
-test_function_definition("shout_all", body = lambda: test_object_after_expression("word1"))
-
 # Test the value of shout1
-test_function_definition("shout_all", body = lambda: test_object_after_expression("shout1"))
-
-# Test the value of word2
-test_function_definition("shout_all", body = lambda: test_object_after_expression("word2"))
+test_function_definition(
+    "shout_all", 
+    arg_names = False,
+    body = lambda: test_object_after_expression("shout1", context_vals = ["congratulations", "you"])
+)
 
 # Test the value of shout2
-test_function_definition("shout_all", body = lambda: test_object_after_expression("shout2"))
+test_function_definition(
+    "shout_all", 
+    arg_names = False,
+    body = lambda: test_object_after_expression("shout2", context_vals = ["congratulations", "you"])
+)
 
 # Test the value of shout_words
-test_function_definition("shout_all", body = lambda: test_object_after_expression("shout_words"))
-
-# Test return value of shout_all()
-test_function_definition("shout_all", arg_names = False, arg_defaults = False, # Already tested this
-    results = [("hello", "hi"), ("data", "camp")]
+test_function_definition(
+    "shout_all", 
+    body = lambda: test_object_after_expression("shout_words", context_vals = ["congratulations", "you"])
 )
 
 # Test if shout_all() is called
 test_function("shout_all")
 
+# Test return value of shout_all()
+test_function_definition(
+    "shout_all", 
+    arg_names = False, 
+    arg_defaults = False, # Already tested this
+    results = [("congratulations", "you")], 
+    wrong_result_msg = "Are you returning the correct value in `shout_all()`?"
+)
+
 # Test the value of yell1
-test_object("yell1", incorrect_msg="Did you assign the result of shout_all() to yell1?")
+test_object("yell1", incorrect_msg="Did you correctly unpack the result of `shout_all()` to `yell1` and `yell2`?")
 
 # Test the value of yell2
-test_object("yell2", incorrect_msg="Did you assign the result of shout_all() to yell2?")
+test_object("yell2", incorrect_msg="Did you correctly unpack the result of `shout_all()` to `yell1` and `yell2`?")
 
-# Test the output
-test_output_contains("congratulations!!!", pattern = False)
-test_output_contains("you!!!", pattern = False)
+# Test the output of yell1 and yell2
+test_output_contains(
+    "congratulations!!!", 
+    pattern = False, 
+    no_output_msg = "Did you print out `yell1`?"
+)
+
+test_output_contains(
+    "congratulations!!!", 
+    pattern = False, 
+    no_output_msg = "Did you print out `yell2`?"
+)
 
 success_msg("Great work!")
 ```
