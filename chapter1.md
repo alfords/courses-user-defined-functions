@@ -619,34 +619,47 @@ print(yell)
 # Test definition of shout()
 test_function_definition("shout", arg_names = True)
 
-# Test the value of word1
-test_function_definition("shout", body = lambda: test_object_after_expression("word1"))
-
 # Test the value of shout1
-test_function_definition("shout", body = lambda: test_object_after_expression("shout1"))
-
-# Test the value of word2
-test_function_definition("shout", body = lambda: test_object_after_expression("word2"))
+test_function_definition(
+    "shout", 
+    arg_names = False,
+    body = lambda: test_object_after_expression("shout1", context_vals = ["congratulations!!!", "you!!!"])
+)
 
 # Test the value of shout2
-test_function_definition("shout", body = lambda: test_object_after_expression("shout2"))
+test_function_definition(
+    "shout", 
+    arg_names = False,
+    body = lambda: test_object_after_expression("shout2", context_vals = ["congratulations!!!", "you!!!"])
+)
 
 # Test the value of new_shout
-test_function_definition("shout", body = lambda: test_object_after_expression("new_shout"))
-
-# Test return value of shout()
-test_function_definition("shout", arg_names = False, arg_defaults = False, # Already tested this
-    results = [("hello", "hi"), ("data", "camp")]
+test_function_definition(
+    "shout", 
+    body = lambda: test_object_after_expression("new_shout", context_vals = ["congratulations", "you"])
 )
 
 # Test if shout() is called
 test_function("shout")
 
+# Test return value of shout()
+test_function_definition(
+    "shout", 
+    arg_names = False, 
+    arg_defaults = False, # Already tested this
+    results = [("congratulations", "you")],
+    wrong_result_msg = "Are you returning the correct value in `shout()`?"
+)
+
 # Test the value of yell
-test_object("yell", incorrect_msg = "Did you assign the result of shout() to yell?")
+test_object("yell", incorrect_msg = "Did you assign the result of `shout()` to `yell`?")
 
 # Test the output
-test_output_contains("congratulations!!!you!!!", pattern = False)
+test_output_contains(
+    "congratulations!!!you!!!", 
+    pattern = False,
+    no_output_msg = "Did you print out `yell`?"
+)
 
 success_msg("Great work!")
 ```
