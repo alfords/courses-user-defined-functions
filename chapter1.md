@@ -225,7 +225,11 @@ test_function_definition(
     "shout", 
     arg_names = False, 
     arg_defaults = False, # Already tested this 
-    body = lambda: test_function("print", args = [0], incorrect_msg = "you should use the `print()` function with the correct argument."))
+    # args argument of test_function doesn't work yet within test_function_definition
+    body = lambda: test_function("print", args = [], incorrect_msg = "you should use the `print()`."))
+
+test_function_definition("shout", arg_names = False, arg_defaults = False,
+    body = lambda: test_expression_output(incorrect_msg = "be sure to print out `shout_word`."))
 
 # Test if shout() is called
 test_function("shout")
@@ -314,11 +318,11 @@ shout('congratulations')
 test_function_definition("shout", arg_names = True)
 
 # Test the value of word
-test_function_definition(
-    "shout", 
-    arg_names = False, 
-    body = lambda: test_object_after_expression("word", context_vals = ["congratulations"])
-)
+#test_function_definition(
+#    "shout", 
+#    arg_names = False, 
+#    body = lambda: test_object_after_expression("word", context_vals = ["congratulations"])
+#)
 
 # Test the value of shout_word
 test_function_definition(
@@ -334,7 +338,7 @@ test_function_definition(
     "shout", 
     arg_names = False, 
     arg_defaults = False, # Already tested this 
-    outputs = [])
+    outputs = [('congratulations')])
 
 # Test if shout() is called
 test_function("shout")
