@@ -348,14 +348,14 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1  key:cd2b04a649
 ## Return a Single Value
 
-You're getting very good at this! Try your hand at another modification to the `shout()` function so that it now _returns_ a single value.
+You're getting very good at this! Try your hand at another modification to the `shout()` function so that it now _returns_ a single value instead of printing within the function. 
 
-Modify the `shout()` function you wrote earlier such that instead of printing within the `shout()` function, you _return_ a value instead. Parts of the function `shout()`, which you wrote earlier, are shown.
+Recall that the `return` keyword lets you return values from functions. Parts of the function `shout()`, which you wrote earlier, are shown.
 
 *** =instructions
 - In the function body, concatenate the string in `word` with `'!!!'` and assign to `shout_word`.
 - Replace the `print` statement with the appropriate `return` statement.
-- Call the `shout` function, passing to it the string, `congratulations`, and assigning the call to the variable, `yell`.
+- Call the `shout` function, passing to it the string, `'congratulations'`, and assigning the call to the variable, `yell`.
 - To check if `yell` contains the value returned by `shout()`, print the value of `yell`
 
 *** =hint
