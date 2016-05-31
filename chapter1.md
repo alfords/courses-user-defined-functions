@@ -385,7 +385,7 @@ import numpy as np
 *** =sample_code
 ```{python}
 # Define shout with the parameter, word
-def shout (word):
+def shout(word):
 
     # Concatenate the strings
     
@@ -403,7 +403,7 @@ def shout (word):
 *** =solution
 ```{python}
 # Define shout with the parameter, word
-def shout (word):
+def shout(word):
 
     # Concatenate the strings
     shout_word = word + '!!!'
