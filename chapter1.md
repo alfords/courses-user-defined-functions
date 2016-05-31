@@ -75,7 +75,7 @@ def square(value):
     print(new_value)
 ```
 
-Your function now has the `value` parameter, which accepts an _argument_ passed to `square` when called. In the function body, the variable `new_value` takes the square of _value_, which is then printed out.
+Your function now has the `value` parameter, which accepts an _argument_ passed to `square` when called. In the function body, the variable `new_value` takes the square of `value`, which is then printed out.
 
 The function `square` now accepts a single parameter and prints out its squared value. But what if you don't want to print that value directly and instead _return_ the squared value and assign it to some variable? You can have your function return the new value by adding the `return` statement, followed by the value to return.
 
@@ -91,7 +91,16 @@ Now your `square` function returns the value instead of printing it. Let's call 
 num = square(4)
 ```
 
-In the example above, the value _4_ was passed to the function call to `square()`. Also note that the function call is assigned to the variable `num`. Because `square()` returns a value, the value it _returns_ will get stored in `num`, which you can later use for other computations.
+In the example above, the value _4_ was passed to the call to `square()`. Also note that the function call is assigned to the variable `num`. Because `square()` returns a value, the value it _returns_ will get stored in `num`, which you can later use for other computations.
+
+One other useful thing to know when writing functions are **docstrings**. _Docstrings_ are used to describe what your function does, such as the computations it performs or its return values. These descriptions serve as _documentation_ for your function so that anyone who reads your function's _docstring_ understands what your function does, without having to trace through all the code in the function definition. Function docstrings are placed in the immediate line after the function header and are placed in between triple double quotes: `"""Docstring"""`. Let's write a docstring for the `square()` function:
+
+```
+def square(value):
+    """Return the square of a value."""
+    new_value = value ** 2
+    return new_value
+```
 
 You've now just learned the basics of defining your own functions! Now it's your turn. In the next few exercises, you will try your hand at defining and using your own functions. 
 
