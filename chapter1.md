@@ -444,7 +444,8 @@ test_function_definition(
     "shout", 
     arg_names = False, 
     arg_defaults = False, # Already tested this
-    results = [("congratulations")]
+    results = [("congratulations")], 
+    wrong_result_msg = "Are you returning the correct value in `shout()`?"
 )
 
 # Test the value of yell
