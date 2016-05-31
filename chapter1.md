@@ -19,7 +19,7 @@ In the next section, you'll learn how to pass multiple arguments to functions, a
 
 Let's begin!
 
-You know how to use the built-in functions `print()` and `str()` in Python.
+You know how to use the Python built-in functions `print()` and `str()`.
 
 Recall that `print()` accepts a string (or a set of strings) and prints the string into the console. For example:
 
