@@ -617,7 +617,7 @@ print(yell)
 # Note [FRANCIS]: Tests appear code-level, that is, as they appear top-down in the code.
 
 # Test definition of shout()
-test_function_definition("shout", arg_names = True)
+test_function_definition("shout", arg_names = True, arg_names_msg = "Check if `shout()` has a correct set of parameters")
 
 # Test the value of shout1
 test_function_definition(
@@ -719,7 +719,7 @@ test_object("num2", incorrect_msg="Did you unpack `nums` to the correct variable
 test_object("num3", incorrect_msg="Did you unpack `nums` to the correct variables?")
 
 # Test the value of even_nums
-test_object("even_nums", incorrect_msg = "Check the values in your tuple.")
+test_object("even_nums", incorrect_msg = "Check the values in your `even_nums` tuple.")
 
 success_msg("Great work!")
 ```
