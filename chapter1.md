@@ -274,31 +274,31 @@ You will now update `shout()` by adding a _parameter_ so that it can accept and 
 
 *** =sample_code
 ```{python}
-# Define the function shout, which accepts the parameter word
+# Define shout with the parameter, word
 def shout(___):
 
-    # Concatenate the string in word with '!!!' and assign to shout_word
+    # Concatenate the strings
     ___ = ___ + '!!!'
 
-    # Print the value of shout_word
+    # Print shout_word
     print(___)
 
-# Call the shout function, with the string 'congratulations'
+# Call shout with the string 'congratulations'
 
 ```
 
 *** =solution
 ```{python}
-# Define the function shout, which accepts the parameter word
+# Define shout with the parameter, word
 def shout(word):
 
-    # Concatenate the string in word with '!!!' and assign to shout_word
+    # Concatenate the strings
     shout_word = word + '!!!'
 
-    # Print the value of shout_word
+    # Print shout_word
     print(shout_word)
 
-# Call the shout function, with the string 'congratulations'
+# Call shout with the string 'congratulations'
 shout('congratulations')
 ```
 
