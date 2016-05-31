@@ -444,7 +444,7 @@ test_function_definition(
     "shout", 
     arg_names = False, 
     arg_defaults = False, # Already tested this
-    results = [("hello"), ("datacamp")]
+    results = [("congratulations")]
 )
 
 # Test the value of yell
