@@ -145,13 +145,17 @@ test_mc(correct = 3,
 
 In the last lecture, Francisco described the basics of how to define a function. You will now write your own function!
 
-Define a function, `shout`, which simply prints out a string with three exclamation marks `'!!!'` at the end. 
+Define a function, `shout`, which simply prints out a string with three exclamation marks `'!!!'` at the end. The code for the `square()` function that we wrote earlier is found below. You can use it as a pattern to define `shout`.
 
-You will **concatenate** the string with the exclamation marks. Recall that you can do this with the `+` operator.
+```
+def square(value):
+    new_value = value ** 2
+    return new_value
+```
 
 *** =instructions
 - Complete the function header by adding the appropriate function name, `shout`.
-- In the function body, concatenate the string, `'congratulations'` with another string, `'!!!'`. Assign the result to `shout_word`.
+- In the function body, **concatenate** the string, `'congratulations'` with another string, `'!!!'`. Assign the result to `shout_word`.
 - Print the value of `shout_word`.
 - Call the `shout` function.
 
