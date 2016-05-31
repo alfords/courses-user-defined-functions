@@ -396,19 +396,19 @@ def shout (word):
 
 *** =solution
 ```{python}
-# Define the function shout, which accepts the parameter word
+# Define shout with the parameter, word
 def shout (word):
 
-    # Concatenate the string in word with '!!!' and assign to shout_word
+    # Concatenate the strings
     shout_word = word + '!!!'
 
-    # Replace the print statement with the appropriate return statement
+    # Replace print with return
     return shout_word
 
-# Call shout with the string 'congratulations' and assign the result to yell
+# Pass 'congratulations' to shout and assign to yell
 yell = shout('congratulations')
 
-# Print the value of yell
+# Print yell
 print(yell)
 ```
 
@@ -547,49 +547,49 @@ Here, you will modify `shout()` to accept two arguments. Parts of the function `
 
 *** =sample_code
 ```{python}
-# Define the function shout, which accepts the parameters word1 and word2
+# Define shout with parameters word1 and word2
 def shout(___, ___):
 
-    # Concatenate word1 with '!!!' and assign to shout1
+    # Concatenate word1 with '!!!'
     
     
-    # Concatenate word2 with '!!!' and assign to shout2
+    # Concatenate word2 with '!!!'
     
     
-    # Concatenate shout1 with shout2 and assign to new_shout
+    # Concatenate shout1 with shout2
     
 
     # Return new_shout
     return new_shout
 
-# Call shout with the strings 'congratulations' and 'you' and assign the result to yell
+# Pass 'congratulations' and 'you' to shout
 
 
-# Print the value of yell
+# Print yell
 print(yell)
 ```
 
 *** =solution
 ```{python}
-# Define the function shout, which accepts the parameters word1 and word2
+# Define shout with parameters word1 and word2
 def shout(word1, word2):
 
-    # Concatenate word1 with '!!!' and assign to shout1
+    # Concatenate word1 with '!!!'
     shout1 = word1 + '!!!'
     
-    # Concatenate word2 with '!!!' and assign to shout2
+    # Concatenate word2 with '!!!'
     shout2 = word2 + '!!!'
     
-    # Concatenate shout1 with shout2 and assign to new_shout
+    # Concatenate shout1 with shout2
     new_shout = shout1 + shout2
 
     # Return new_shout
     return new_shout
 
-# Call shout with the strings 'congratulations' and 'you' and assign the result to yell
+# Pass 'congratulations' and 'you' to shout
 yell = shout('congratulations', 'you')
 
-# Print the value of yell
+# Print yell
 print(yell)
 ```
 
