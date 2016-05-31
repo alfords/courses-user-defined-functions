@@ -35,9 +35,6 @@ a_number = str(5)
 
 Unlike `str()`, the return value of `print()` is `NoneType`, which basically means that it doesn't have a return value.
 
-
-**Writing your own function**
-
 While built-in Python functions are cool, you'll need functions that have functionality specific to your needs. Fortunately, you can define your own functions in Python!
 
 To start a function definition, 
