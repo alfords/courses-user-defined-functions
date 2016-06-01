@@ -186,7 +186,7 @@ def square(value):
 ```{python}
 # Define the function shout
 def ___():
-    """Print a string with three exclamation marks"""
+    
     # Concatenate the strings
     
 
@@ -806,7 +806,7 @@ Let's now update our `shout()` function to return multiple values. Instead of re
 ```{python}
 # Define shout_all with parameters word1 and word2
 def shout(___, ___):
-    """Return a tuple of strings"""
+    
     # Concatenate word1 with '!!!'
     
     
