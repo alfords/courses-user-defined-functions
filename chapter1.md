@@ -828,7 +828,8 @@ test_function_definition("shout_all", arg_names = True)
 test_function_definition(
     "shout_all", 
     arg_names = False,
-    body = lambda: test_object_after_expression("shout1", context_vals = ["congratulations", "you"])
+    body = lambda: test_object_after_expression("shout1", context_vals = ["congratulations", "you"], 
+    undefined_msg = "In your definition of `shout_all()`, have you defined `shout1`?")
 )
 
 # Test the value of shout2
