@@ -186,7 +186,7 @@ def square(value):
 ```{python}
 # Define the function shout
 def ___():
-
+    """Print a string with three exclamation marks"""
     # Concatenate the strings
     
 
@@ -201,7 +201,7 @@ def ___():
 ```{python}
 # Define the function shout
 def shout():
-
+    """Print a string with three exclamation marks"""
     # Concatenate the strings
     shout_word = 'congratulations' + '!!!'
 
