@@ -227,7 +227,12 @@ test_function_definition("shout", arg_names = True)
 test_function_definition(
     "shout", 
     arg_names = False, 
-    body = lambda: test_object_after_expression("shout_word"))
+    body = lambda: test_object_after_expression(
+        "shout_word", 
+        undefined_msg = "have you defined `shout_word`?", 
+        incorrect_msg = "are you sure you assigned the correct value to `shout_word`?"
+    )
+)
 
 # Test the print() call
 test_function_definition(
@@ -235,14 +240,21 @@ test_function_definition(
     arg_names = False, 
     arg_defaults = False, # Already tested this 
     # args argument of test_function doesn't work yet within test_function_definition
-    body = lambda: test_function("print", args = [], incorrect_msg = "you should use the `print()` function."))
+    body = lambda: test_function(
+        "print", 
+        args = [], 
+        incorrect_msg = "you should use the `print()` function.",
+        not_called_msg = "make sure you call `print()`."
+    )
+)
 
 # Test the output of shout_word
 test_function_definition(
     "shout", 
     arg_names = False, 
     arg_defaults = False,
-    body = lambda: test_expression_output(incorrect_msg = "be sure to print out `shout_word`."))
+    body = lambda: test_expression_output(incorrect_msg = "be sure to print out `shout_word`.")
+)
 
 # Test if shout() is called
 test_function("shout")
@@ -334,7 +346,13 @@ test_function_definition("shout", arg_names = True)
 test_function_definition(
     "shout", 
     arg_names = False, 
-    body = lambda: test_object_after_expression("shout_word", context_vals = ["congratulations"]))
+    body = lambda: test_object_after_expression(
+        "shout_word", 
+        context_vals = ["congratulations"], 
+        undefined_msg = "have you defined `shout_word`?", 
+        incorrect_msg = "are you sure you assigned the correct value to `shout_word`?"
+    )
+)
 
 # Test the print() call
 test_function_definition(
@@ -442,7 +460,12 @@ test_function_definition("shout", arg_names = True)
 test_function_definition(
     "shout", 
     arg_names = False,
-    body = lambda: test_object_after_expression("shout_word", context_vals = ["congratulations"])
+    body = lambda: test_object_after_expression(
+        "shout_word", 
+        context_vals = ["congratulations"], 
+        undefined_msg = "have you defined `shout_word`?", 
+        incorrect_msg = "are you sure you assigned the correct value to `shout_word`?"
+    )
 )
 
 # Test if shout() is called
@@ -632,20 +655,36 @@ test_function_definition("shout", arg_names = True)
 test_function_definition(
     "shout", 
     arg_names = False,
-    body = lambda: test_object_after_expression("shout1", context_vals = ["congratulations", "you"])
+    body = lambda: test_object_after_expression(
+        "shout1", 
+        context_vals = ["congratulations", "you"], 
+        undefined_msg = "have you defined `shout1`?", 
+        incorrect_msg = "are you sure you assigned the correct value to `shout1`?"
+    )
 )
 
 # Test the value of shout2
 test_function_definition(
     "shout", 
     arg_names = False,
-    body = lambda: test_object_after_expression("shout2", context_vals = ["congratulations", "you"])
+    body = lambda: test_object_after_expression(
+        "shout2", 
+        context_vals = ["congratulations", "you"], 
+        undefined_msg = "have you defined `shout2`?", 
+        incorrect_msg = "are you sure you assigned the correct value to `shout2`?"
+    )
 )
 
 # Test the value of new_shout
 test_function_definition(
     "shout", 
-    body = lambda: test_object_after_expression("new_shout", context_vals = ["congratulations", "you"])
+    arg_names = False,
+    body = lambda: test_object_after_expression(
+        "new_shout", 
+        context_vals = ["congratulations", "you"], 
+        undefined_msg = "have you defined `new_shout`?", 
+        incorrect_msg = "are you sure you assigned the correct value to `new_shout`?"
+    )
 )
 
 # Test if shout() is called
