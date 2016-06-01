@@ -305,7 +305,7 @@ You will now update `shout()` by adding a _parameter_ so that it can accept and 
 ```{python}
 # Define shout with the parameter, word
 def shout(___):
-
+    """Print a string with three exclamation marks"""
     # Concatenate the strings
     ___ = ___ + '!!!'
 
@@ -320,7 +320,7 @@ def shout(___):
 ```{python}
 # Define shout with the parameter, word
 def shout(word):
-
+    """Print a string with three exclamation marks"""
     # Concatenate the strings
     shout_word = word + '!!!'
 
@@ -413,7 +413,7 @@ import numpy as np
 ```{python}
 # Define shout with the parameter, word
 def shout(word):
-
+    """Return a string with three exclamation marks"""
     # Concatenate the strings
     
 
@@ -431,7 +431,7 @@ def shout(word):
 ```{python}
 # Define shout with the parameter, word
 def shout(word):
-
+    """Return a string with three exclamation marks"""
     # Concatenate the strings
     shout_word = word + '!!!'
 
@@ -596,7 +596,7 @@ Here, you will modify `shout()` to accept two arguments. Parts of the function `
 ```{python}
 # Define shout with parameters word1 and word2
 def shout(___, ___):
-
+    """Concatenate strings with three exclamation marks"""
     # Concatenate word1 with '!!!'
     
     
@@ -620,7 +620,7 @@ print(yell)
 ```{python}
 # Define shout with parameters word1 and word2
 def shout(word1, word2):
-
+    """Concatenate strings with three exclamation marks"""
     # Concatenate word1 with '!!!'
     shout1 = word1 + '!!!'
     
@@ -806,7 +806,7 @@ Let's now update our `shout()` function to return multiple values. Instead of re
 ```{python}
 # Define shout_all with parameters word1 and word2
 def shout(___, ___):
-
+    """Return a tuple of strings"""
     # Concatenate word1 with '!!!'
     
     
@@ -831,7 +831,7 @@ print(yell2)
 ```{python}
 # Define shout_all with parameters word1 and word2
 def shout_all(word1, word2):
-
+    """Return a tuple of strings"""
     # Concatenate word1 with '!!!'
     shout1 = word1 + '!!!'
     
